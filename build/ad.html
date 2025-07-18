@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build Scratch Mods with Scrooch 3</title>
+  <link rel="icon" href="https://cattymod.github.io/images/apple-touch-icon.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f7fafc;
+      color: #1a202c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 480px;
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .logo {
+      width: 56px;
+      margin: 0 auto 1rem;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+      background: #3182ce;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    a.button:hover,
+    a.button:focus {
+      background: #2b6cb0;
+      box-shadow: 0 6px 18px rgba(43, 108, 176, 0.5);
+      outline: none;
+    }
+    footer {
+      font-size: 0.75rem;
+      color: #a0aec0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <img src="https://avatars.githubusercontent.com/u/221273265?s=200&v=4" alt="Scrooch Logo" class="logo" />
+    <h1 id="headline">Build Scratch Mods Like <span id="mod-name"></span></h1>
+    <p>Unlock your creativity by making your own Scratch editor mods using Scrooch 3 — the powerful framework trusted by popular Scratch mod projects.</p>
+    <a href="https://github.com/scrooch-project/Scrooch3-Template" target="_blank" rel="noopener" class="button" aria-label="Create your Scratch mod with Scrooch 3 Template">Get Started with Scrooch 3 Template</a>
+    <footer>Not affiliated with Scratch, the Scratch Team, or the Scratch Foundation.</footer>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const mod = params.get('mod') || 'Your Favorite';
+    document.getElementById('mod-name').textContent = mod;
+  </script>
+</body>
+</html>
